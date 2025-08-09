@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  address: 127.0.0.1
+
+spring:
+  application:
+    name: product-service
+
+logging:
+  level:
+    root: INFO
+    com.example.meli.comparator: DEBUG

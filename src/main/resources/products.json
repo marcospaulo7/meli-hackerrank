@@ -1,0 +1,1303 @@
+[
+  {
+    "id": "1",
+    "name": "Smartphone X200",
+    "imageUrl": "http://example.com/smartphone_x200.jpg",
+    "description": "Powerful smartphone with 128GB storage and 6.5-inch display.",
+    "price": 799.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "black",
+      "storage": "128GB",
+      "screenSize": "6.5 inch",
+      "battery": "4000mAh"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Smartphone X300",
+    "imageUrl": "http://example.com/smartphone_x300.jpg",
+    "description": "Advanced smartphone featuring 256GB storage and 120Hz OLED display.",
+    "price": 999.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "white",
+      "storage": "256GB",
+      "screenSize": "6.7 inch",
+      "battery": "4500mAh"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Wireless Earbuds Pro",
+    "imageUrl": "http://example.com/earbuds_pro.jpg",
+    "description": "Noise-cancelling wireless earbuds with 24-hour battery life.",
+    "price": 199.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "black",
+      "batteryLife": "24h",
+      "waterResistant": "IPX4"
+    }
+  },
+  {
+    "id": "4",
+    "name": "4K Ultra HD TV 55\"",
+    "imageUrl": "http://example.com/tv_55.jpg",
+    "description": "55-inch 4K Ultra HD Smart TV with HDR support.",
+    "price": 649.99,
+    "classification": "Electronics",
+    "specifications": {
+      "screenSize": "55 inch",
+      "resolution": "4K UHD",
+      "smartTV": "yes"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Bluetooth Speaker S10",
+    "imageUrl": "http://example.com/speaker_s10.jpg",
+    "description": "Portable Bluetooth speaker with deep bass and 12-hour battery.",
+    "price": 89.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "blue",
+      "batteryLife": "12h",
+      "waterResistant": "IPX5"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Refrigerator Model R500",
+    "imageUrl": "http://example.com/fridge_r500.jpg",
+    "description": "Energy-efficient refrigerator with 350L capacity and frost-free technology.",
+    "price": 1199.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "350L",
+      "energyRating": "A++",
+      "color": "silver"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Microwave Oven 900W",
+    "imageUrl": "http://example.com/microwave_900w.jpg",
+    "description": "900W microwave oven with quick defrost and multiple power settings.",
+    "price": 149.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "power": "900W",
+      "capacity": "20L",
+      "color": "black"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Vacuum Cleaner V7",
+    "imageUrl": "http://example.com/vacuum_v7.jpg",
+    "description": "Cordless vacuum cleaner with 60-minute runtime and HEPA filter.",
+    "price": 299.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "runtime": "60 min",
+      "weight": "2.5kg",
+      "color": "red"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Air Conditioner Split 12000 BTU",
+    "imageUrl": "http://example.com/ac_12000.jpg",
+    "description": "Split air conditioner with 12000 BTU cooling capacity and inverter technology.",
+    "price": 799.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "coolingCapacity": "12000 BTU",
+      "energyRating": "A++",
+      "color": "white"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Dishwasher D300",
+    "imageUrl": "http://example.com/dishwasher_d300.jpg",
+    "description": "Compact dishwasher with 6 place settings and eco wash mode.",
+    "price": 399.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "6 place settings",
+      "energyRating": "A+",
+      "color": "stainless steel"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Treadmill T500",
+    "imageUrl": "http://example.com/treadmill_t500.jpg",
+    "description": "Foldable treadmill with 12-speed settings and heart rate monitor.",
+    "price": 699.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "maxSpeed": "12 km/h",
+      "foldable": "yes",
+      "weightCapacity": "120kg"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Mountain Bike X1",
+    "imageUrl": "http://example.com/bike_x1.jpg",
+    "description": "27.5-inch mountain bike with 21-speed gears and hydraulic brakes.",
+    "price": 499.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "wheelSize": "27.5 inch",
+      "gears": "21",
+      "brakes": "hydraulic"
+    }
+  },
+  {
+    "id": "13",
+    "name": "Yoga Mat Premium",
+    "imageUrl": "http://example.com/yogamat_premium.jpg",
+    "description": "Non-slip yoga mat with 6mm thickness and eco-friendly material.",
+    "price": 39.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "thickness": "6mm",
+      "material": "TPE",
+      "color": "purple"
+    }
+  },
+  {
+    "id": "14",
+    "name": "Dumbbell Set 20kg",
+    "imageUrl": "http://example.com/dumbbells_20kg.jpg",
+    "description": "Adjustable dumbbell set with weights up to 20kg.",
+    "price": 89.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "weightRange": "2-20kg",
+      "material": "cast iron",
+      "adjustable": "yes"
+    }
+  },
+  {
+    "id": "15",
+    "name": "Running Shoes SpeedX",
+    "imageUrl": "http://example.com/shoes_speedx.jpg",
+    "description": "Lightweight running shoes with breathable mesh and cushioned sole.",
+    "price": 119.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "sizeRange": "36-45",
+      "material": "mesh",
+      "color": "blue"
+    }
+  },
+  {
+    "id": "16",
+    "name": "Mystery Novel 'The Lost Key'",
+    "imageUrl": "http://example.com/book_lostkey.jpg",
+    "description": "A thrilling mystery novel full of suspense and unexpected twists.",
+    "price": 14.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Jane Smith",
+      "pages": "320",
+      "language": "English"
+    }
+  },
+  {
+    "id": "17",
+    "name": "Science Fiction 'Galactic Wars'",
+    "imageUrl": "http://example.com/book_galacticwars.jpg",
+    "description": "Epic science fiction adventure spanning multiple galaxies.",
+    "price": 18.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Mark Johnson",
+      "pages": "400",
+      "language": "English"
+    }
+  },
+  {
+    "id": "18",
+    "name": "Cooking Guide 'Healthy Eats'",
+    "imageUrl": "http://example.com/book_healthyeats.jpg",
+    "description": "A comprehensive guide to healthy and delicious meals.",
+    "price": 22.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Emily Davis",
+      "pages": "250",
+      "language": "English"
+    }
+  },
+  {
+    "id": "19",
+    "name": "Children's Book 'Adventures in Forest'",
+    "imageUrl": "http://example.com/book_forest.jpg",
+    "description": "Fun and educational children's book about forest animals.",
+    "price": 9.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Tom Lee",
+      "pages": "80",
+      "language": "English"
+    }
+  },
+  {
+    "id": "20",
+    "name": "Biography 'The Innovator'",
+    "imageUrl": "http://example.com/book_innovator.jpg",
+    "description": "Biography of a famous tech entrepreneur and innovator.",
+    "price": 24.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Sarah Connor",
+      "pages": "350",
+      "language": "English"
+    }
+  },
+  {
+    "id": "21",
+    "name": "Men's Jacket WinterPro",
+    "imageUrl": "http://example.com/jacket_winterpro.jpg",
+    "description": "Waterproof men's winter jacket with thermal insulation.",
+    "price": 129.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "M-XXL",
+      "color": "black",
+      "material": "polyester"
+    }
+  },
+  {
+    "id": "22",
+    "name": "Women's T-shirt CottonSoft",
+    "imageUrl": "http://example.com/tshirt_cottonsoft.jpg",
+    "description": "Soft cotton t-shirt available in multiple colors.",
+    "price": 19.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "S-L",
+      "color": "white",
+      "material": "cotton"
+    }
+  },
+  {
+    "id": "23",
+    "name": "Men's Sneakers RunFast",
+    "imageUrl": "http://example.com/sneakers_runfast.jpg",
+    "description": "Comfortable men's sneakers designed for running.",
+    "price": 89.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "40-45",
+      "color": "gray",
+      "material": "synthetic"
+    }
+  },
+  {
+    "id": "24",
+    "name": "Women's Jeans ClassicFit",
+    "imageUrl": "http://example.com/jeans_classicfit.jpg",
+    "description": "Classic fit women's jeans with stretch fabric.",
+    "price": 49.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "26-32",
+      "color": "blue",
+      "material": "denim"
+    }
+  },
+  {
+    "id": "25",
+    "name": "Unisex Hat SunGuard",
+    "imageUrl": "http://example.com/hat_sunguard.jpg",
+    "description": "Lightweight unisex sun hat with UV protection.",
+    "price": 24.99,
+    "classification": "Clothing",
+    "specifications": {
+      "size": "one size",
+      "color": "beige",
+      "material": "cotton"
+    }
+  },
+  {
+    "id": "26",
+    "name": "Smartphone Z100",
+    "imageUrl": "http://example.com/smartphone_z100.jpg",
+    "description": "Entry-level smartphone with 64GB storage and 5.8-inch display.",
+    "price": 399.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "blue",
+      "storage": "64GB",
+      "screenSize": "5.8 inch",
+      "battery": "3000mAh"
+    }
+  },
+  {
+    "id": "27",
+    "name": "Smartwatch Active",
+    "imageUrl": "http://example.com/smartwatch_active.jpg",
+    "description": "Fitness smartwatch with heart rate monitor and GPS.",
+    "price": 149.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "black",
+      "batteryLife": "18h",
+      "waterResistant": "IP67"
+    }
+  },
+  {
+    "id": "28",
+    "name": "Laptop Pro 15",
+    "imageUrl": "http://example.com/laptop_pro15.jpg",
+    "description": "High-performance laptop with 16GB RAM and 512GB SSD.",
+    "price": 1299.99,
+    "classification": "Electronics",
+    "specifications": {
+      "processor": "Intel i7",
+      "ram": "16GB",
+      "storage": "512GB SSD"
+    }
+  },
+  {
+    "id": "29",
+    "name": "Digital Camera ZoomX",
+    "imageUrl": "http://example.com/camera_zoomx.jpg",
+    "description": "Compact digital camera with 20MP and 10x optical zoom.",
+    "price": 499.99,
+    "classification": "Electronics",
+    "specifications": {
+      "megapixels": "20MP",
+      "zoom": "10x",
+      "color": "black"
+    }
+  },
+  {
+    "id": "30",
+    "name": "Gaming Console GX",
+    "imageUrl": "http://example.com/console_gx.jpg",
+    "description": "Next-gen gaming console with 4K support and 1TB storage.",
+    "price": 499.99,
+    "classification": "Electronics",
+    "specifications": {
+      "storage": "1TB",
+      "resolution": "4K",
+      "color": "white"
+    }
+  },
+  {
+    "id": "31",
+    "name": "Washing Machine WM300",
+    "imageUrl": "http://example.com/washingmachine_wm300.jpg",
+    "description": "Front-load washing machine with 7kg capacity and quick wash.",
+    "price": 699.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "7kg",
+      "energyRating": "A++",
+      "color": "white"
+    }
+  },
+  {
+    "id": "32",
+    "name": "Electric Kettle EK1000",
+    "imageUrl": "http://example.com/kettle_ek1000.jpg",
+    "description": "1.7L electric kettle with auto shut-off and boil-dry protection.",
+    "price": 39.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "1.7L",
+      "power": "1500W",
+      "color": "silver"
+    }
+  },
+  {
+    "id": "33",
+    "name": "Coffee Maker CM200",
+    "imageUrl": "http://example.com/coffeemaker_cm200.jpg",
+    "description": "Programmable coffee maker with 12-cup capacity.",
+    "price": 89.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "12 cups",
+      "color": "black"
+    }
+  },
+  {
+    "id": "34",
+    "name": "Blender B150",
+    "imageUrl": "http://example.com/blender_b150.jpg",
+    "description": "High-speed blender with 5 settings and pulse function.",
+    "price": 59.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "power": "500W",
+      "color": "red"
+    }
+  },
+  {
+    "id": "35",
+    "name": "Electric Grill EG50",
+    "imageUrl": "http://example.com/grill_eg50.jpg",
+    "description": "Compact electric grill with non-stick plates and adjustable temperature.",
+    "price": 79.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "power": "1500W",
+      "color": "black"
+    }
+  },
+  {
+    "id": "36",
+    "name": "Basketball Pro",
+    "imageUrl": "http://example.com/basketball_pro.jpg",
+    "description": "Official size basketball with durable rubber surface.",
+    "price": 29.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "size": "7",
+      "material": "rubber",
+      "color": "orange"
+    }
+  },
+  {
+    "id": "37",
+    "name": "Tennis Racket Ultra",
+    "imageUrl": "http://example.com/tennisracket_ultra.jpg",
+    "description": "Lightweight tennis racket with graphite frame and 16x19 string pattern.",
+    "price": 119.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "weight": "280g",
+      "material": "graphite",
+      "stringPattern": "16x19"
+    }
+  },
+  {
+    "id": "38",
+    "name": "Swimming Goggles ClearView",
+    "imageUrl": "http://example.com/goggles_clearview.jpg",
+    "description": "Anti-fog swimming goggles with UV protection.",
+    "price": 24.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "color": "blue",
+      "antiFog": "yes",
+      "uvProtection": "yes"
+    }
+  },
+  {
+    "id": "39",
+    "name": "Fitness Tracker FitBand",
+    "imageUrl": "http://example.com/fitband.jpg",
+    "description": "Slim fitness tracker with step counting and sleep monitoring.",
+    "price": 49.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "batteryLife": "7 days",
+      "waterResistant": "IP67",
+      "color": "black"
+    }
+  },
+  {
+    "id": "40",
+    "name": "Camping Tent 4P",
+    "imageUrl": "http://example.com/tent_4p.jpg",
+    "description": "Lightweight 4-person camping tent with waterproof fabric.",
+    "price": 149.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "capacity": "4 persons",
+      "weight": "3kg",
+      "waterproof": "yes"
+    }
+  },
+  {
+    "id": "41",
+    "name": "Historical Novel 'Empire's Rise'",
+    "imageUrl": "http://example.com/book_empiresrise.jpg",
+    "description": "Engaging historical novel set in the medieval era.",
+    "price": 16.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Robert Brown",
+      "pages": "420",
+      "language": "English"
+    }
+  },
+  {
+    "id": "42",
+    "name": "Self-Help 'Mindset Mastery'",
+    "imageUrl": "http://example.com/book_mindset.jpg",
+    "description": "Guide to developing a growth mindset and personal success.",
+    "price": 19.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Laura White",
+      "pages": "280",
+      "language": "English"
+    }
+  },
+  {
+    "id": "43",
+    "name": "Travel Guide 'Europe Uncovered'",
+    "imageUrl": "http://example.com/book_europe.jpg",
+    "description": "Comprehensive travel guide with maps and tips for Europe.",
+    "price": 24.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Michael Green",
+      "pages": "350",
+      "language": "English"
+    }
+  },
+  {
+    "id": "44",
+    "name": "Fantasy Novel 'Dragon's Quest'",
+    "imageUrl": "http://example.com/book_dragonsquest.jpg",
+    "description": "Epic fantasy adventure filled with magic and dragons.",
+    "price": 15.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Samantha Black",
+      "pages": "410",
+      "language": "English"
+    }
+  },
+  {
+    "id": "45",
+    "name": "Cookbook 'Vegan Delights'",
+    "imageUrl": "http://example.com/book_vegan.jpg",
+    "description": "Delicious and healthy vegan recipes for every meal.",
+    "price": 21.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Emma Stone",
+      "pages": "230",
+      "language": "English"
+    }
+  },
+  {
+    "id": "46",
+    "name": "Men's Hoodie ComfortFit",
+    "imageUrl": "http://example.com/hoodie_comfortfit.jpg",
+    "description": "Warm men's hoodie made from soft fleece fabric.",
+    "price": 59.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "M-XXL",
+      "color": "gray",
+      "material": "fleece"
+    }
+  },
+  {
+    "id": "47",
+    "name": "Women's Blouse Elegant",
+    "imageUrl": "http://example.com/blouse_elegant.jpg",
+    "description": "Stylish women's blouse with floral patterns.",
+    "price": 39.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "S-L",
+      "color": "red",
+      "material": "silk"
+    }
+  },
+  {
+    "id": "48",
+    "name": "Men's Leather Belt",
+    "imageUrl": "http://example.com/belt_leather.jpg",
+    "description": "Durable men's leather belt with metal buckle.",
+    "price": 29.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "M-L",
+      "color": "brown",
+      "material": "leather"
+    }
+  },
+  {
+    "id": "49",
+    "name": "Women's Scarf WinterWarm",
+    "imageUrl": "http://example.com/scarf_warm.jpg",
+    "description": "Soft and cozy winter scarf made of wool.",
+    "price": 24.99,
+    "classification": "Clothing",
+    "specifications": {
+      "size": "one size",
+      "color": "beige",
+      "material": "wool"
+    }
+  },
+  {
+    "id": "50",
+    "name": "Unisex Socks SportX",
+    "imageUrl": "http://example.com/socks_sportx.jpg",
+    "description": "Breathable unisex sports socks with cushioned sole.",
+    "price": 9.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "35-42",
+      "color": "white",
+      "material": "cotton"
+    }
+  },
+  {
+    "id": "51",
+    "name": "Tablet Alpha 10",
+    "imageUrl": "http://example.com/tablet_alpha10.jpg",
+    "description": "10-inch tablet with 64GB storage and IPS display.",
+    "price": 299.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "gray",
+      "storage": "64GB",
+      "screenSize": "10 inch",
+      "battery": "6000mAh"
+    }
+  },
+  {
+    "id": "52",
+    "name": "Smart Home Speaker",
+    "imageUrl": "http://example.com/speaker_smart.jpg",
+    "description": "Voice-controlled smart speaker with multi-room support.",
+    "price": 129.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "white",
+      "connectivity": "WiFi",
+      "voiceAssistant": "yes"
+    }
+  },
+  {
+    "id": "53",
+    "name": "Portable Charger 20000mAh",
+    "imageUrl": "http://example.com/charger_20000.jpg",
+    "description": "High-capacity portable charger with fast charging support.",
+    "price": 49.99,
+    "classification": "Electronics",
+    "specifications": {
+      "capacity": "20000mAh",
+      "output": "2.1A",
+      "color": "black"
+    }
+  },
+  {
+    "id": "54",
+    "name": "Noise Cancelling Headphones",
+    "imageUrl": "http://example.com/headphones_nc.jpg",
+    "description": "Over-ear wireless headphones with active noise cancellation.",
+    "price": 249.99,
+    "classification": "Electronics",
+    "specifications": {
+      "batteryLife": "30h",
+      "color": "black",
+      "connectivity": "Bluetooth"
+    }
+  },
+  {
+    "id": "55",
+    "name": "LED Desk Lamp",
+    "imageUrl": "http://example.com/lamp_led.jpg",
+    "description": "Adjustable LED desk lamp with touch controls and brightness levels.",
+    "price": 39.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "color": "white",
+      "power": "10W",
+      "adjustable": "yes"
+    }
+  },
+  {
+    "id": "56",
+    "name": "Robot Vacuum Cleaner",
+    "imageUrl": "http://example.com/robot_vacuum.jpg",
+    "description": "Smart robot vacuum with app control and scheduling.",
+    "price": 399.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "batteryLife": "90min",
+      "mapping": "LIDAR",
+      "color": "black"
+    }
+  },
+  {
+    "id": "57",
+    "name": "Slow Cooker 5L",
+    "imageUrl": "http://example.com/slowcooker_5l.jpg",
+    "description": "5-liter slow cooker with programmable timer and multiple heat settings.",
+    "price": 59.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "5L",
+      "color": "red",
+      "power": "300W"
+    }
+  },
+  {
+    "id": "58",
+    "name": "Electric Fan Turbo",
+    "imageUrl": "http://example.com/fan_turbo.jpg",
+    "description": "High-speed electric fan with oscillation and remote control.",
+    "price": 49.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "power": "50W",
+      "speedSettings": "3",
+      "color": "white"
+    }
+  },
+  {
+    "id": "59",
+    "name": "Water Purifier Ultra",
+    "imageUrl": "http://example.com/water_purifier.jpg",
+    "description": "Under-sink water purifier with multi-stage filtration.",
+    "price": 299.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "filterStages": "5",
+      "capacity": "10L/day",
+      "color": "silver"
+    }
+  },
+  {
+    "id": "60",
+    "name": "Electric Drill 18V",
+    "imageUrl": "http://example.com/drill_18v.jpg",
+    "description": "Cordless electric drill with variable speed and LED light.",
+    "price": 89.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "voltage": "18V",
+      "battery": "2Ah",
+      "weight": "1.5kg"
+    }
+  },
+  {
+    "id": "61",
+    "name": "Soccer Ball Pro",
+    "imageUrl": "http://example.com/soccer_ball_pro.jpg",
+    "description": "Official size and weight soccer ball with synthetic leather.",
+    "price": 34.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "size": "5",
+      "material": "synthetic leather",
+      "color": "white/black"
+    }
+  },
+  {
+    "id": "62",
+    "name": "Golf Clubs Set",
+    "imageUrl": "http://example.com/golf_clubs.jpg",
+    "description": "Complete set of 14 golf clubs with carrying bag.",
+    "price": 899.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "clubs": "14",
+      "material": "steel",
+      "bagIncluded": "yes"
+    }
+  },
+  {
+    "id": "63",
+    "name": "Kayak Single Seat",
+    "imageUrl": "http://example.com/kayak_single.jpg",
+    "description": "Lightweight single-seat kayak with durable polyethylene body.",
+    "price": 499.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "length": "3.2m",
+      "weight": "15kg",
+      "color": "yellow"
+    }
+  },
+  {
+    "id": "64",
+    "name": "Boxing Gloves 12oz",
+    "imageUrl": "http://example.com/boxing_gloves.jpg",
+    "description": "12oz boxing gloves with high-density foam padding.",
+    "price": 59.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "weight": "12oz",
+      "material": "leather",
+      "color": "red"
+    }
+  },
+  {
+    "id": "65",
+    "name": "Fishing Rod XT",
+    "imageUrl": "http://example.com/fishing_rod_xt.jpg",
+    "description": "Lightweight fishing rod with carbon fiber blank and cork handle.",
+    "price": 129.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "length": "2.1m",
+      "material": "carbon fiber",
+      "action": "fast"
+    }
+  },
+  {
+    "id": "66",
+    "name": "Cookbook 'Mediterranean Flavors'",
+    "imageUrl": "http://example.com/book_mediterranean.jpg",
+    "description": "Delicious Mediterranean recipes with authentic ingredients.",
+    "price": 19.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Luca Rossi",
+      "pages": "220",
+      "language": "English"
+    }
+  },
+  {
+    "id": "67",
+    "name": "Children's Book 'Space Adventures'",
+    "imageUrl": "http://example.com/book_space.jpg",
+    "description": "Exciting space exploration stories for young readers.",
+    "price": 12.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Nina Young",
+      "pages": "90",
+      "language": "English"
+    }
+  },
+  {
+    "id": "68",
+    "name": "Romance Novel 'Summer Love'",
+    "imageUrl": "http://example.com/book_summerlove.jpg",
+    "description": "Heartwarming romance set on a sunny beach town.",
+    "price": 14.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Amy Wells",
+      "pages": "350",
+      "language": "English"
+    }
+  },
+  {
+    "id": "69",
+    "name": "Biography 'Trailblazer'",
+    "imageUrl": "http://example.com/book_trailblazer.jpg",
+    "description": "Inspiring biography of a pioneering scientist.",
+    "price": 22.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "James Carter",
+      "pages": "400",
+      "language": "English"
+    }
+  },
+  {
+    "id": "70",
+    "name": "Cookbook 'Quick & Easy Meals'",
+    "imageUrl": "http://example.com/book_quickeasy.jpg",
+    "description": "Simple recipes for busy lifestyles.",
+    "price": 17.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Olivia Green",
+      "pages": "180",
+      "language": "English"
+    }
+  },
+  {
+    "id": "71",
+    "name": "Men's Leather Jacket",
+    "imageUrl": "http://example.com/jacket_leather.jpg",
+    "description": "Classic men's leather jacket with zip closure.",
+    "price": 199.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "M-XXL",
+      "color": "black",
+      "material": "leather"
+    }
+  },
+  {
+    "id": "72",
+    "name": "Women's Running Leggings",
+    "imageUrl": "http://example.com/leggings_running.jpg",
+    "description": "High-performance running leggings with moisture-wicking fabric.",
+    "price": 49.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "S-L",
+      "color": "black",
+      "material": "polyester"
+    }
+  },
+  {
+    "id": "73",
+    "name": "Men's Formal Shirt",
+    "imageUrl": "http://example.com/shirt_formal.jpg",
+    "description": "Cotton formal shirt with slim fit design.",
+    "price": 39.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "M-XL",
+      "color": "white",
+      "material": "cotton"
+    }
+  },
+  {
+    "id": "74",
+    "name": "Women's Summer Dress",
+    "imageUrl": "http://example.com/dress_summer.jpg",
+    "description": "Lightweight summer dress with floral print.",
+    "price": 59.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "S-M",
+      "color": "yellow",
+      "material": "cotton"
+    }
+  },
+  {
+    "id": "75",
+    "name": "Unisex Sunglasses UV400",
+    "imageUrl": "http://example.com/sunglasses_uv400.jpg",
+    "description": "UV400 protection sunglasses with polarized lenses.",
+    "price": 29.99,
+    "classification": "Clothing",
+    "specifications": {
+      "color": "black",
+      "lensType": "polarized",
+      "frameMaterial": "plastic"
+    }
+  },
+  {
+    "id": "76",
+    "name": "Smartphone Y500",
+    "imageUrl": "http://example.com/smartphone_y500.jpg",
+    "description": "Mid-range smartphone with 128GB storage and dual cameras.",
+    "price": 599.99,
+    "classification": "Electronics",
+    "specifications": {
+      "color": "red",
+      "storage": "128GB",
+      "screenSize": "6.3 inch",
+      "battery": "4200mAh"
+    }
+  },
+  {
+    "id": "77",
+    "name": "Laptop Air 13",
+    "imageUrl": "http://example.com/laptop_air13.jpg",
+    "description": "Lightweight laptop with 8GB RAM and 256GB SSD.",
+    "price": 899.99,
+    "classification": "Electronics",
+    "specifications": {
+      "processor": "Intel i5",
+      "ram": "8GB",
+      "storage": "256GB SSD"
+    }
+  },
+  {
+    "id": "78",
+    "name": "Gaming Mouse X7",
+    "imageUrl": "http://example.com/mouse_x7.jpg",
+    "description": "Ergonomic gaming mouse with customizable DPI and RGB lighting.",
+    "price": 59.99,
+    "classification": "Electronics",
+    "specifications": {
+      "dpi": "16000",
+      "buttons": "7",
+      "color": "black"
+    }
+  },
+  {
+    "id": "79",
+    "name": "Smart TV 65\" OLED",
+    "imageUrl": "http://example.com/tv_oled65.jpg",
+    "description": "65-inch OLED Smart TV with Dolby Vision and HDR10+.",
+    "price": 1499.99,
+    "classification": "Electronics",
+    "specifications": {
+      "screenSize": "65 inch",
+      "resolution": "4K UHD",
+      "smartTV": "yes"
+    }
+  },
+  {
+    "id": "80",
+    "name": "Digital Photo Frame 10\"",
+    "imageUrl": "http://example.com/photo_frame_10.jpg",
+    "description": "10-inch digital photo frame with WiFi connectivity.",
+    "price": 129.99,
+    "classification": "Electronics",
+    "specifications": {
+      "screenSize": "10 inch",
+      "connectivity": "WiFi",
+      "color": "black"
+    }
+  },
+  {
+    "id": "81",
+    "name": "Rice Cooker 5 Cups",
+    "imageUrl": "http://example.com/rice_cooker_5cups.jpg",
+    "description": "Electric rice cooker with keep warm function and non-stick pot.",
+    "price": 49.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "5 cups",
+      "power": "500W",
+      "color": "white"
+    }
+  },
+  {
+    "id": "82",
+    "name": "Ice Maker IM300",
+    "imageUrl": "http://example.com/ice_maker_im300.jpg",
+    "description": "Compact ice maker producing up to 26 lbs of ice per day.",
+    "price": 179.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "26 lbs/day",
+      "color": "silver",
+      "power": "120W"
+    }
+  },
+  {
+    "id": "83",
+    "name": "Garbage Disposal Unit",
+    "imageUrl": "http://example.com/garbage_disposal.jpg",
+    "description": "Powerful garbage disposal with stainless steel grinding components.",
+    "price": 99.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "power": "0.75 HP",
+      "color": "black"
+    }
+  },
+  {
+    "id": "84",
+    "name": "Ceiling Fan Ultra",
+    "imageUrl": "http://example.com/ceiling_fan_ultra.jpg",
+    "description": "Modern ceiling fan with remote control and LED lighting.",
+    "price": 149.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "speedSettings": "3",
+      "color": "white",
+      "remoteControl": "yes"
+    }
+  },
+  {
+    "id": "85",
+    "name": "Ice Cream Maker Deluxe",
+    "imageUrl": "http://example.com/icecream_maker.jpg",
+    "description": "Electric ice cream maker with 1.5L capacity and timer.",
+    "price": 59.99,
+    "classification": "Home Appliances",
+    "specifications": {
+      "capacity": "1.5L",
+      "power": "150W",
+      "color": "pink"
+    }
+  },
+  {
+    "id": "86",
+    "name": "Camping Backpack 40L",
+    "imageUrl": "http://example.com/backpack_40l.jpg",
+    "description": "Durable 40L camping backpack with multiple compartments.",
+    "price": 89.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "capacity": "40L",
+      "weight": "1.2kg",
+      "color": "green"
+    }
+  },
+  {
+    "id": "87",
+    "name": "Climbing Rope 30m",
+    "imageUrl": "http://example.com/climbing_rope.jpg",
+    "description": "Dynamic climbing rope with 30m length and 10.5mm diameter.",
+    "price": 149.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "length": "30m",
+      "diameter": "10.5mm",
+      "material": "nylon"
+    }
+  },
+  {
+    "id": "88",
+    "name": "Skateboard Pro Deck",
+    "imageUrl": "http://example.com/skateboard_pro.jpg",
+    "description": "Professional skateboard deck with 7-ply maple wood.",
+    "price": 79.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "length": "32 inch",
+      "material": "maple wood",
+      "color": "black"
+    }
+  },
+  {
+    "id": "89",
+    "name": "Ski Goggles WinterX",
+    "imageUrl": "http://example.com/ski_goggles.jpg",
+    "description": "Anti-fog ski goggles with UV protection and adjustable strap.",
+    "price": 59.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "color": "white",
+      "antiFog": "yes",
+      "uvProtection": "yes"
+    }
+  },
+  {
+    "id": "90",
+    "name": "Hiking Boots TrailMaster",
+    "imageUrl": "http://example.com/hiking_boots.jpg",
+    "description": "Waterproof hiking boots with ankle support and durable sole.",
+    "price": 129.99,
+    "classification": "Sports Equipment",
+    "specifications": {
+      "sizeRange": "38-46",
+      "color": "brown",
+      "material": "leather"
+    }
+  },
+  {
+    "id": "91",
+    "name": "Fantasy Series 'Legends of Eldoria'",
+    "imageUrl": "http://example.com/book_eldoria.jpg",
+    "description": "Immersive fantasy series filled with magic and intrigue.",
+    "price": 18.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Elena Hart",
+      "pages": "380",
+      "language": "English"
+    }
+  },
+  {
+    "id": "92",
+    "name": "Biography 'Hidden Figures'",
+    "imageUrl": "http://example.com/book_hiddenfigures.jpg",
+    "description": "Biography highlighting contributions of women in science.",
+    "price": 21.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Margot Lee",
+      "pages": "320",
+      "language": "English"
+    }
+  },
+  {
+    "id": "93",
+    "name": "Cookbook 'Asian Cuisine'",
+    "imageUrl": "http://example.com/book_asiancuisine.jpg",
+    "description": "Traditional and modern Asian recipes for home cooks.",
+    "price": 22.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Kenji Tanaka",
+      "pages": "250",
+      "language": "English"
+    }
+  },
+  {
+    "id": "94",
+    "name": "Children's Book 'Ocean Wonders'",
+    "imageUrl": "http://example.com/book_oceanwonders.jpg",
+    "description": "Educational children's book about ocean life and conservation.",
+    "price": 13.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "Laura Fields",
+      "pages": "90",
+      "language": "English"
+    }
+  },
+  {
+    "id": "95",
+    "name": "Self-Help 'Time Mastery'",
+    "imageUrl": "http://example.com/book_timemastery.jpg",
+    "description": "Techniques and tips to manage your time effectively.",
+    "price": 19.99,
+    "classification": "Books",
+    "specifications": {
+      "author": "John Hayes",
+      "pages": "270",
+      "language": "English"
+    }
+  },
+  {
+    "id": "96",
+    "name": "Men's Raincoat StormGuard",
+    "imageUrl": "http://example.com/raincoat_stormguard.jpg",
+    "description": "Waterproof raincoat with breathable fabric and adjustable hood.",
+    "price": 89.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "M-XXL",
+      "color": "navy",
+      "material": "polyester"
+    }
+  },
+  {
+    "id": "97",
+    "name": "Women's Wool Coat Classic",
+    "imageUrl": "http://example.com/woolcoat_classic.jpg",
+    "description": "Elegant wool coat with tailored fit and warm lining.",
+    "price": 149.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "S-L",
+      "color": "camel",
+      "material": "wool"
+    }
+  },
+  {
+    "id": "98",
+    "name": "Men's Running Shorts",
+    "imageUrl": "http://example.com/shorts_running.jpg",
+    "description": "Lightweight running shorts with moisture-wicking fabric.",
+    "price": 29.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "M-L",
+      "color": "black",
+      "material": "polyester"
+    }
+  },
+  {
+    "id": "99",
+    "name": "Women's Sandals BeachWalk",
+    "imageUrl": "http://example.com/sandals_beachwalk.jpg",
+    "description": "Comfortable beach sandals with adjustable straps.",
+    "price": 34.99,
+    "classification": "Clothing",
+    "specifications": {
+      "sizeRange": "36-40",
+      "color": "tan",
+      "material": "synthetic"
+    }
+  },
+  {
+    "id": "100",
+    "name": "Unisex Beanie CozyFit",
+    "imageUrl": "http://example.com/beanie_cozyfit.jpg",
+    "description": "Warm knit beanie suitable for cold weather.",
+    "price": 14.99,
+    "classification": "Clothing",
+    "specifications": {
+      "size": "one size",
+      "color": "gray",
+      "material": "acrylic"
+    }
+  }
+]
