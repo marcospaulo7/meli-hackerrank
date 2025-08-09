@@ -2,13 +2,13 @@ package com.example.meli.comparator.data;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.Map;
 
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {

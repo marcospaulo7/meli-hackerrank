@@ -1,4 +1,4 @@
-package com.example.meli.comparator.handler;
+package com.example.meli.comparator.handler.exceptions;
 
 public class ProductNotFoundException extends RuntimeException {
     public ProductNotFoundException(Long id) {

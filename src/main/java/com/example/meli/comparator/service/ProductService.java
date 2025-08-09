@@ -8,8 +8,6 @@ import java.util.Map;
 
 public interface ProductService {
 
-   // Page<Product> getAllProducts(Pageable pageable);
-
     Product getProductbyId(Long id);
 
     Page<Product> getProducts(Map<String, String> filters, Pageable pageable);
