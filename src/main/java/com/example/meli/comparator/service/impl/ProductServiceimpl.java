@@ -93,6 +93,12 @@ public class ProductServiceimpl implements ProductService {
         int start = (int) pageable.getOffset();
         int end = Math.min(start + pageable.getPageSize(), filteredList.size());
 
+        // Aqui precisa de um tratamento para caso start seja maior que filteredList.size()
+        if (start > filteredList.size()) {
+            // Retornar página vazia para evitar exceção
+            return new PageImpl<>(List.of(), pageable, filteredList.size());
+        }
+
         // Sublista para a página específica
         List<Product> paged = filteredList.subList(start, end);
 

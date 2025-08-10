@@ -76,6 +76,9 @@ Após a aplicação estar rodando, você pode testar os endpoints via:
 - **Documentação OpenAPI JSON**:  
   `http://localhost:8080/api-docs`
 
+ Observação: Dentro da pasta resources do projeto, 
+ tem uma collection do Postman para os testes da API. Essa collection contém requisições pré-configuradas para os endpoints principais, incluindo filtros, paginação e busca por ID.
+
 ---
 
 ## Observações
