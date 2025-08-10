@@ -1,25 +1,22 @@
 package com.example.meli.comparator.controller;
 
-
 import com.example.meli.comparator.data.Product;
+import com.example.meli.comparator.handler.exceptions.ProductNotFoundException;
 import com.example.meli.comparator.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
-
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-
 import org.springframework.http.MediaType;
-
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
@@ -27,23 +24,30 @@ import java.util.Collections;
 import java.util.Map;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
-
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(ProductController.class)
+@Import(ProductControllerTest.TestConfig.class)
 class ProductControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
-    @Mock
+    @Autowired
     private ProductService productService;
 
     private Product sampleProduct;
     private Page<Product> samplePage;
+
+    @TestConfiguration
+    static class TestConfig {
+        @Bean
+        public ProductService productService() {
+            return Mockito.mock(ProductService.class);
+        }
+    }
 
     @BeforeEach
     void setup() {
@@ -58,8 +62,8 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetAllProducts_withFilters_shouldReturnPage() throws Exception {
-
+    @DisplayName("should return paginated products with filters")
+    void shouldReturnPaginatedProductsWithFilters() throws Exception {
         Mockito.when(productService.getProducts(any(Map.class), any(Pageable.class))).thenReturn(samplePage);
 
         mockMvc.perform(get("/products")
@@ -75,7 +79,8 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetProductById_shouldReturnProduct() throws Exception {
+    @DisplayName("should return product by id")
+    void shouldReturnProductById() throws Exception {
         Mockito.when(productService.getProductbyId(1L)).thenReturn(sampleProduct);
 
         mockMvc.perform(get("/products/1")
@@ -88,14 +93,13 @@ class ProductControllerTest {
     }
 
     @Test
-    void testGetProductById_notFound() throws Exception {
-        Mockito.when(productService.getProductbyId(999L)).thenReturn(null);
+    @DisplayName("should return 404 when product not found by id")
+    void shouldReturn404WhenProductNotFoundById() throws Exception {
+        Mockito.when(productService.getProductbyId(999L))
+                .thenThrow(new ProductNotFoundException(999L));
 
         mockMvc.perform(get("/products/999")
                         .contentType(MediaType.APPLICATION_JSON))
-                // Como no controller você não está tratando produto nulo, talvez retorne 200 com corpo null,
-                // mas idealmente deveria retornar 404. Ajuste se quiser.
-                .andExpect(status().isOk())
-                .andExpect(content().string(""));  // corpo vazio, pois retornou null
+                .andExpect(status().isNotFound());
     }
 }

@@ -5,42 +5,33 @@ import com.example.meli.comparator.handler.exceptions.ReadProductFileException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
-import org.mockito.Mockito;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.*;
 
 class ProductLoaderTest {
 
-    private static final String VALID_JSON = "[{\"id\":1,\"name\":\"Product 1\",\"price\":10.0}]";
-    private static final String INVALID_JSON = "[{\"id\":1,\"name\":\"Product 1\"";
-
     @Test
-    @DisplayName("loadProducts returns list when JSON is valid")
-    void loadProducts_ReturnsListWhenValidJson() {
-        try (MockedStatic<ProductLoader> mocked = Mockito.mockStatic(ProductLoader.class, Mockito.CALLS_REAL_METHODS)) {
-            // Mock getResourceAsStream para retornar stream com JSON válido
-            mocked.when(() -> ProductLoader.class.getResourceAsStream("/products.json"))
-                    .thenReturn(new ByteArrayInputStream(VALID_JSON.getBytes(StandardCharsets.UTF_8)));
+    @DisplayName("Should load products successfully when the file exists and is valid")
+    void shouldLoadProductsSuccessfully() {
+        List<Product> products = ProductLoader.loadProducts();
 
-            List<Product> products = ProductLoader.loadProducts();
-
-            assertThat(products).isNotNull();
-            assertThat(products).hasSize(1);
-            assertThat(products.get(0).getName()).isEqualTo("Product 1");
-        }
+        assertThat(products).hasSize(100);
+        assertThat(products.getFirst().getName()).isEqualTo("Smartphone X200");
     }
 
     @Test
-    @DisplayName("loadProducts throws IllegalStateException when file not found")
-    void loadProducts_ThrowsWhenFileNotFound() {
-        try (MockedStatic<ProductLoader> mocked = Mockito.mockStatic(ProductLoader.class, Mockito.CALLS_REAL_METHODS)) {
-            mocked.when(() -> ProductLoader.class.getResourceAsStream("/products.json"))
-                    .thenReturn(null);
+    @DisplayName("Should throw IllegalStateException when the file is not found")
+    void shouldThrowWhenFileNotFound() {
+        try (MockedStatic<ProductLoader> mocked = mockStatic(ProductLoader.class, CALLS_REAL_METHODS)) {
+            mocked.when(ProductLoader::getProductStream).thenReturn(null);
 
             assertThatThrownBy(ProductLoader::loadProducts)
                     .isInstanceOf(IllegalStateException.class)
@@ -49,11 +40,13 @@ class ProductLoaderTest {
     }
 
     @Test
-    @DisplayName("loadProducts throws ReadProductFileException for invalid JSON")
-    void loadProducts_ThrowsReadProductFileExceptionForInvalidJson() {
-        try (MockedStatic<ProductLoader> mocked = Mockito.mockStatic(ProductLoader.class, Mockito.CALLS_REAL_METHODS)) {
-            mocked.when(() -> ProductLoader.class.getResourceAsStream("/products.json"))
-                    .thenReturn(new ByteArrayInputStream(INVALID_JSON.getBytes(StandardCharsets.UTF_8)));
+    @DisplayName("Should throw ReadProductFileException when the JSON format is invalid")
+    void shouldThrowWhenJsonIsInvalid() {
+        String invalidJson = "{ invalid json ]";
+        InputStream invalidStream = new ByteArrayInputStream(invalidJson.getBytes(StandardCharsets.UTF_8));
+
+        try (MockedStatic<ProductLoader> mocked = mockStatic(ProductLoader.class, CALLS_REAL_METHODS)) {
+            mocked.when(ProductLoader::getProductStream).thenReturn(invalidStream);
 
             assertThatThrownBy(ProductLoader::loadProducts)
                     .isInstanceOf(ReadProductFileException.class)
@@ -61,7 +54,20 @@ class ProductLoaderTest {
         }
     }
 
-    // Para IOException, simular InputStream que lança IOException é mais complexo,
-    // pode ser ignorado ou feito com InputStream customizado lançando IOException no read()
+    @Test
+    @DisplayName("Should throw ReadProductFileException when an IOException occurs")
+    void shouldThrowWhenIOExceptionOccurs() throws IOException {
+        InputStream faultyStream = mock(InputStream.class);
 
+        when(faultyStream.read(any(byte[].class), anyInt(), anyInt()))
+                .thenThrow(new IOException("Simulated IO error"));
+
+        try (MockedStatic<ProductLoader> mocked = mockStatic(ProductLoader.class, CALLS_REAL_METHODS)) {
+            mocked.when(ProductLoader::getProductStream).thenReturn(faultyStream);
+
+            assertThatThrownBy(ProductLoader::loadProducts)
+                    .isInstanceOf(ReadProductFileException.class)
+                    .hasMessageContaining("Error reading products.json");
+        }
+    }
 }

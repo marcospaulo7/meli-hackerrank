@@ -1,18 +1,29 @@
+# Configuração do servidor para a aplicação
 server:
+  # Defino a porta padrão onde o app vai rodar (8080)
   port: 8080
+  # Deixo o endereço como 0.0.0.0 para aceitar conexões de qualquer IP (útil para ambientes em container ou nuvem)
   address: 0.0.0.0
 
+# Configuração da aplicação Spring
 spring:
   application:
+    # Nome da aplicação, que pode ser usado para identificação em logs, registros, etc.
     name: product-service
 
+# Configurações de logging para controle dos níveis de log
 logging:
   level:
+    # Configuro o nível padrão para INFO para não poluir demais os logs
     root: INFO
+    # Para o pacote específico da aplicação, coloco DEBUG para facilitar o diagnóstico durante desenvolvimento/testes
     com.example.meli.comparator: DEBUG
 
+# Configurações do springdoc para documentação OpenAPI / Swagger
 springdoc:
   api-docs:
+    # Defino o caminho onde a documentação da API estará disponível
     path: /api-docs
   swagger-ui:
+    # Defino o caminho para a interface do Swagger UI, onde consigo testar e visualizar a API
     path: /swagger-ui.html

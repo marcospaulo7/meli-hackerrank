@@ -1,14 +1,18 @@
 package com.example.meli.comparator.service;
 
+import com.example.meli.comparator.config.CacheConfig;
 import com.example.meli.comparator.data.Product;
 import com.example.meli.comparator.handler.exceptions.ProductNotFoundException;
 import com.example.meli.comparator.repository.ProductRepository;
+import com.example.meli.comparator.service.impl.ProductServiceimpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -17,9 +21,12 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@MockitoSettings
+@Import(CacheConfig.class)
 class ProductServiceImplTest {
 
     @Mock
@@ -32,7 +39,6 @@ class ProductServiceImplTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
 
         productList = List.of(
                 Product.builder()
@@ -54,7 +60,7 @@ class ProductServiceImplTest {
 
     @Test
     @DisplayName("getProducts returns all products when no filters")
-    void getProductsReturnsAllProductsWhenNoFilters() {
+    void shouldReturnAllProductsWhenNoFilters() {
         when(repository.getAllProducts()).thenReturn(productList);
 
         Pageable pageable = PageRequest.of(0, 10);
@@ -66,8 +72,20 @@ class ProductServiceImplTest {
     }
 
     @Test
+    @DisplayName("getProducts returns all products when filters is null")
+    void shouldReturnAllProductsWhenFiltersIsNull() {
+        when(repository.getAllProducts()).thenReturn(productList);
+
+        Page<Product> result = service.getProducts(null, PageRequest.of(0, 10));
+
+        assertThat(result.getContent()).containsExactlyElementsOf(productList);
+        verify(repository, times(1)).getAllProducts();
+    }
+
+
+    @Test
     @DisplayName("getProducts returns filtered products when filters applied")
-    void getProductsReturnsFilteredProductsWhenFiltersApplied() {
+    void shouldReturnFilteredProductsWhenFiltersApplied() {
         when(repository.getAllProducts()).thenReturn(productList);
 
         Pageable pageable = PageRequest.of(0, 10);
@@ -81,8 +99,26 @@ class ProductServiceImplTest {
     }
 
     @Test
+    @DisplayName("getProducts returns all products when filters are not allowed")
+    void shouldReturnAllProductsWhenFiltersAreNotAllowed() {
+
+        when(repository.getAllProducts()).thenReturn(productList);
+
+        Map<String, String> filters = Map.of("cor", "vermelho");
+
+        Page<Product> result = service.getProducts(filters, PageRequest.of(0, 10));
+
+        assertThat(result.getContent()).hasSize(2); // lista completa
+        assertThat(result.getContent()).containsExactlyElementsOf(productList);
+
+        verify(repository, times(1)).getAllProducts();
+
+        Mockito.verifyNoMoreInteractions(repository);
+    }
+
+    @Test
     @DisplayName("getProductById returns product when found")
-    void getProductByIdReturnsProductWhenFound() {
+    void shouldReturnProductByIdWhenFound() {
         when(repository.getProductById(1L)).thenReturn(productList.get(0));
 
         Product product = service.getProductbyId(1L);
@@ -92,9 +128,33 @@ class ProductServiceImplTest {
 
     @Test
     @DisplayName("getProductById throws exception when product not found")
-    void getProductByIdThrowsExceptionWhenNotFound() {
+    void shouldThrowExceptionWhenProductNotFound() {
         when(repository.getProductById(99L)).thenReturn(null);
 
         assertThrows(ProductNotFoundException.class, () -> service.getProductbyId(99L));
     }
+
+    @Test
+    @DisplayName("Should cache filtered products and avoid repeated repository calls")
+    void shouldCacheFilteredProducts() {
+        // Configuro o mock para retornar a lista de produtos ao chamar getAllProducts()
+        when(repository.getAllProducts()).thenReturn(productList);
+
+        Map<String, String> filters = Map.of("name", "Phone");
+        Pageable pageable = PageRequest.of(0, 10);
+
+        // Na primeira chamada com esses filtros, o serviço deve buscar no repositório
+        Page<Product> firstCall = service.getProducts(filters, pageable);
+        assertEquals("Phone", firstCall.getContent().getFirst().getName());
+        verify(repository, times(1)).getAllProducts();
+
+        // Na segunda chamada com os mesmos parâmetros, o resultado deve vir do cache,
+        // ou seja, o repositório não deve ser chamado novamente
+        Page<Product> secondCall = service.getProducts(filters, pageable);
+        assertEquals("Phone", secondCall.getContent().getFirst().getName());
+
+        // Verifico que não houve nenhuma outra interação com o repositório após a primeira chamada
+        verifyNoMoreInteractions(repository);
+    }
+
 }

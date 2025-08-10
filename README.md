@@ -5,6 +5,10 @@
 API RESTful desenvolvida para fornecer detalhes de produtos para uso em um recurso de comparação de itens.  
 A aplicação foi construída em Java 21 com Spring Boot, seguindo boas práticas de design, tratamento de erros, documentação e testes.
 
+### Escolha da Stack Backend: 
+
+Optei por usar Java 21 com Spring Boot devido à minha familiaridade consolidada com a linguagem e o framework, o que me permite desenvolver com mais rapidez e segurança, além de aproveitar os recursos modernos e melhorias de desempenho trazidos pela versão recente do Java. Para aumentar ainda mais a eficiência, integrei ferramentas de IA generativa (ChatGPT) ao fluxo de desenvolvimento, facilitando a prototipagem, revisão de código, esclarecimento de dúvidas técnicas e organização da documentação. Essa combinação garantiu um backend robusto, moderno e alinhado às melhores práticas atuais, entregando qualidade com agilidade.
+
 ---
 
 ## Design da API

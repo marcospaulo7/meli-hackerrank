@@ -20,6 +20,8 @@ import java.util.Map;
 @RequestMapping("/products")
 public class ProductController {
 
+    /* Eu injetei o serviço para lidar com a lógica de negócio relacionada a produtos.
+     Quero manter o controller focado em receber requisições e devolver respostas, delegando a lógica para o service. */
     @Autowired
     private ProductService service;
 
@@ -41,12 +43,16 @@ public class ProductController {
             @Parameter(hidden = true)
             Pageable pageable) {
 
+        // Aqui eu registro no log os filtros recebidos para ajudar na análise de chamadas e debugging.
         log.info("Getting products by filters {} ", filters);
 
+        // Passo os filtros e a paginação para o serviço, que vai retornar os dados já preparados.
         Page<Product> page = service.getProducts(filters, pageable);
 
+        // Confirma no log que a busca foi realizada com sucesso.
         log.info("Success getting products by filters - STATUS 200");
 
+        // Retorno a resposta HTTP 200 com o conteúdo paginado dos produtos.
         return ResponseEntity.ok(page);
     }
 
@@ -60,12 +66,16 @@ public class ProductController {
             @Parameter(description = "ID of the product to be obtained")
             @PathVariable Long id) {
 
+        // Registro o id solicitado para acompanhar requisições específicas.
         log.info("Getting product by id {} ", id);
 
+        // Chamo o serviço para obter o produto pelo id. Caso não exista, o serviço pode lançar exceção.
         var product = service.getProductbyId(id);
 
+        // Registro o sucesso da operação junto com os dados do produto encontrado.
         log.info("Success getting product by id {} - STATUS 200 - Product: {}.", id, product);
 
+        // Retorno o produto com status HTTP 200 OK.
         return ResponseEntity.ok(product);
     }
 }
