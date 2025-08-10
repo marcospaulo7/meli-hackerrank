@@ -157,4 +157,19 @@ class ProductServiceImplTest {
         verifyNoMoreInteractions(repository);
     }
 
+    @Test
+    @DisplayName("Should return empty page when requested page start index is out of bounds")
+    void shouldReturnEmptyPageWhenPageIsOutOfBounds() {
+        when(repository.getAllProducts()).thenReturn(productList);
+
+        Pageable pageable = PageRequest.of(10, 10); // start = 10 * 10 = 100 > 2
+
+        Page<Product> result = service.getProducts(null, pageable);
+
+        assertNotNull(result);
+        assertTrue(result.isEmpty(), "Expected empty page when start index exceeds list size");
+        assertEquals(0, result.getContent().size());
+        assertEquals(productList.size(), result.getTotalElements());
+    }
+
 }
